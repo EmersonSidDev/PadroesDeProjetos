@@ -1,4 +1,4 @@
-package com.github.emersonsid.padroesdeprojetos.simplefactory;
+package com.github.emersonsid.padroesdeprojetos.factorymethod;
 
 public abstract class Conta {
     protected String nomeTitular;
@@ -8,10 +8,10 @@ public abstract class Conta {
     public abstract void descontarTarifa();
     public abstract void atualizarRendimento();
 
-    public Conta(double saldo, String nomeTitular, int numeroConta){
-        this.saldo = saldo;
+    public Conta(String nomeTitular, int numeroConta, double saldo){
         this.nomeTitular = nomeTitular;
         this.numeroConta = numeroConta;
+        this.saldo = saldo;
     }
 
     public void exibirDados(){
