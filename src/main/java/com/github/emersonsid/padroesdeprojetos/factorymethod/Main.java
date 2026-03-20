@@ -1,19 +1,28 @@
 package com.github.emersonsid.padroesdeprojetos.factorymethod;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        ContaFactory contaFactory;
+        ArrayList<ContaFactory> factories = new ArrayList<>();
 
         ArrayList<Conta> contas = new ArrayList<>();
 
-        contaFactory = new ContaCorrenteFactory();
+        String nome;
+        int numeroConta;
+        double saldo;
 
-        contas.add(contaFactory.criarConta(
-                "Arthur",
-                123456,
+        factories.add(new ContaCorrenteFactory());
+        factories.add(new ContaPoupancaFactory());
+
+        nome = JOptionPane.showInputDialog("Informe o nome: ");
+        numeroConta = Integer.parseInt(JOptionPane.showInputDialog("Informe o número da conta:"));
+
+        contas.add(factories.get(0).criarConta(
+                nome,
+                numeroConta,
                 500
         ));
 
@@ -21,9 +30,7 @@ public class Main {
         contas.get(0).atualizarRendimento();
         contas.get(0).exibirDados();
 
-        contaFactory = new ContaPoupancaFactory();
-
-        contas.add(contaFactory.criarConta(
+        contas.add(factories.get(1).criarConta(
                 "Bianca",
                 654321,
                 2000
