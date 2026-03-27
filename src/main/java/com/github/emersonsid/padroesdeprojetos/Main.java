@@ -6,9 +6,13 @@ public class Main {
     public static void main(String[] args) {
         Diretor diretor = new Diretor();
         LivroBuilder padroesProjetoBuilder = new LivroPadroesProjetoBuilder();
+        LivroBuilder desenvolvendoJogosBuilder = new LivroDesenvolvendoJogosBuilder();
 
         diretor.construirLivro(padroesProjetoBuilder);
+        diretor.construirLivro(desenvolvendoJogosBuilder);
 
         System.out.println(padroesProjetoBuilder.getLivro());
+        System.out.println("\n\n\n\n\n");
+        System.out.println(desenvolvendoJogosBuilder.getLivro());
     }
 }

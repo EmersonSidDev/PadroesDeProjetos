@@ -49,11 +49,15 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "\ncapa='" + capa + "'" +
-                "\ndedicatoria='" + dedicatoria + "'" +
-                "\nconteudo='" + conteudo + "'" +
-                "\nreferencias='" + referencias + "'" +
-                "\n}";
+        return  "==================== LIVRO ====================\n" +
+                "====================  Capa ====================\n" +
+                capa + "\n" +
+                "================= Dedicatória =================\n" +
+                dedicatoria +"\n" +
+                "==================  Conteúdo ==================\n" +
+                conteudo + "\n" +
+                "================= Referências =================\n" +
+                referencias + "\n" +
+                "===============================================";
     }
 }
