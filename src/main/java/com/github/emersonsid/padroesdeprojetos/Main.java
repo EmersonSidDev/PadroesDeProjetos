@@ -1,17 +1,38 @@
 package com.github.emersonsid.padroesdeprojetos;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Circulo circulo1 = new Circulo(20.0);
+        Retangulo retangulo1 = new Retangulo(10.0, 20.0);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Circulo circulo2 = (Circulo) circulo1.clone();
+        Circulo circulo3 = circulo1;
+        /// Ao fazer isso "Circulo circulo3 = circulo1;",
+        /// voce nao cria um novo objeto,
+        /// apenas fica com duas variaveis referenciando o mesmo objeto
+        
+        Retangulo retangulo2 = (Retangulo) retangulo1.clone();
+
+        System.out.println("Circulo1:");
+        circulo1.desenhar();
+        System.out.println("Circulo2:");
+        circulo2.desenhar();
+        System.out.println("Circulo3:");
+        circulo3.desenhar();
+
+        circulo3.setRaio(5.0);
+        System.out.println("\nCirculo3 recebeu novo valor no raio\n");
+
+        System.out.println("Circulo1:");
+        circulo1.desenhar();
+        System.out.println("Circulo2:");
+        circulo2.desenhar();
+        System.out.println("Circulo3:");
+        circulo3.desenhar();
+
+        System.out.println("\n\n");
+
+        retangulo1.desenhar();
+        retangulo2.desenhar();
     }
 }
