@@ -4,14 +4,24 @@ package com.github.emersonsid.padroesdeprojetos;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Veiculo carro1 = new Carro(new MotorEletrico());
+        Veiculo carro2 = new Carro(new MotorGasolina());
+        Veiculo moto1 = new Moto(new MotorGasolina());
+        Veiculo moto2 = new Moto(new MotorEletrico());
+        Veiculo caminhao1 = new Caminhao(new MotorGasolina());
+        Veiculo caminhao2 = new Caminhao(new MotorEletrico());
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("\nCarro 01");
+        carro1.movimentar();
+        System.out.println("\nCarro 02");
+        carro2.movimentar();
+        System.out.println("\nMoto 01");
+        moto1.movimentar();
+        System.out.println("\nMoto 02");
+        moto2.movimentar();
+        System.out.println("\nCaminhão 01");
+        caminhao1.movimentar();
+        System.out.println("\nCaminhão 02");
+        caminhao2.movimentar();
     }
 }
