@@ -10,6 +10,8 @@ public class Main {
         Veiculo moto2 = new Moto(new MotorEletrico());
         Veiculo caminhao1 = new Caminhao(new MotorGasolina());
         Veiculo caminhao2 = new Caminhao(new MotorEletrico());
+        Veiculo caminhao3 = new Caminhao(new MotorDiesel());
+        Veiculo bicicleta = new Bicicleta(new MotorPedal());
 
         System.out.println("\nCarro 01");
         carro1.movimentar();
@@ -23,5 +25,9 @@ public class Main {
         caminhao1.movimentar();
         System.out.println("\nCaminhão 02");
         caminhao2.movimentar();
+        System.out.println("\nCaminhão 03");
+        caminhao3.movimentar();
+        System.out.println("\nBicicleta");
+        bicicleta.movimentar();
     }
 }

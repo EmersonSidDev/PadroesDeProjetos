@@ -10,5 +10,7 @@ public class Moto extends Veiculo {
     public void movimentar() {
         System.out.println("Subi na moto");
         motor.ligar();
+        motor.acelerar();
+        motor.frear();
     }
 }

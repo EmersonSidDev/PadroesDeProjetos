@@ -10,5 +10,7 @@ public class Carro extends Veiculo {
     public void movimentar() {
         System.out.println("Entrei no carro");
         motor.ligar();
+        motor.acelerar();
+        motor.frear();
     }
 }
