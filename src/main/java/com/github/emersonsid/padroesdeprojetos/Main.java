@@ -1,9 +1,14 @@
 package com.github.emersonsid.padroesdeprojetos;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        Lanche pedido = new SanduicheHamburger();
+        System.out.println(pedido.getDescricao() + " - R$ " + pedido.preco());
 
+        pedido = new Bacon(pedido);
+        System.out.println(pedido.getDescricao() + " - R$ " + pedido.preco());
+
+        pedido = new CarneExtra(pedido);
+        System.out.println(pedido.getDescricao() + " - R$ " + pedido.preco());
     }
 }
