@@ -3,8 +3,8 @@ package com.github.emersonsid.padroesdeprojetos;
 import java.util.ArrayList;
 
 public class Pasta implements ArquivoSistema {
-    private String nome;
-    private ArrayList<ArquivoSistema> filhos = new ArrayList<ArquivoSistema>();
+    private final String nome;
+    private final ArrayList<ArquivoSistema> filhos = new ArrayList<>();
 
     public Pasta(String nome){
         this.nome = nome;
@@ -20,5 +20,26 @@ public class Pasta implements ArquivoSistema {
 
     public void add(ArquivoSistema arquivo){
         filhos.add(arquivo);
+    }
+
+    public void remove(ArquivoSistema arquivo){
+        filhos.remove(arquivo);
+    }
+
+    @Override
+    public int size() {
+        int total = 0;
+        for (ArquivoSistema filho : filhos) {
+            total += filho.size();
+        }
+        return total;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public ArrayList<ArquivoSistema> getFilhos() {
+        return filhos;
     }
 }

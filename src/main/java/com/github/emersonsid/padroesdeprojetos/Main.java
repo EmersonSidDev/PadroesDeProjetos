@@ -17,6 +17,14 @@ public class Main {
         raiz.add(documentos);
         raiz.add(fotos);
 
+        System.out.println("Estrutura inicial:");
         raiz.exibir("- ");
+        System.out.println("Tamanho total: " + raiz.size());
+
+        // Demonstrar remoção
+        documentos.remove(arquivo2);
+        System.out.println("\nApós remover lembretes.txt:");
+        raiz.exibir("- ");
+        System.out.println("Tamanho total: " + raiz.size());
     }
 }
