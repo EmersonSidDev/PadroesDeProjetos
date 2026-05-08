@@ -11,12 +11,12 @@ public class Main {
         canal.attach(inscrito2);
         canal.attach(inscrito3);
 
-        canal.publicarConteudo("Novo vídeo sobre Padrões de Projeto!");
+        canal.publicarConteudo("Aprenda tudo sobre Padrões de Projeto");
 
         canal.detach(inscrito2);
 
         System.out.println("\nApós o Inscrito 02 se desinscrever:\n");
 
-        canal.publicarConteudo("Novo vídeo sobre Desenvolvimento de Jogos na Unity!");
+        canal.publicarConteudo("Desenvolvendo Jogos na Unity");
     }
 }

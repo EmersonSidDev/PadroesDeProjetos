@@ -9,7 +9,7 @@ public class CanalInfluencer extends Subject {
     }
 
     public void publicarConteudo(String conteudo) {
-        System.out.println("Canal " + nomeCanal + " publicou: " + conteudo);
+        conteudo = "Canal " + nomeCanal + " publicou: " + conteudo + "!";
         notifyObservers(conteudo);
     }
 }
