@@ -17,7 +17,7 @@ public abstract class ProcessadorPagamento {
     }
 
     protected double calcularTaxas(double valor){
-        return valor * 0.01;
+        return valor * 0.00;
     }
 
     protected abstract boolean realizarCobranca(double valor);

@@ -1,15 +1,15 @@
 package com.github.emersonsid.padroesdeprojetos;
 
-public class PagamentoCartao extends ProcessadorPagamento {
+public class PagamentoPix extends ProcessadorPagamento {
     @Override
     protected double calcularTaxas(double valor) {
-        return valor * 0.03;
+        return valor * 0.01;
     }
 
     @Override
     protected boolean realizarCobranca(double valor) {
         System.out.println(
-                "Processando pagamento com cartão de crédito no valor de "
+                "Processando pagamento com pix no valor de "
                         + ProcessadorPagamento.formatarReal(valor)
         );
         return true;
