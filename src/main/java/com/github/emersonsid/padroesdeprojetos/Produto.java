@@ -7,6 +7,12 @@ public class Produto {
     String descricao;
     BigDecimal precoUnitario;
 
+    public Produto(String codigo, String descricao, BigDecimal precoUnitario) {
+        this.codigo = codigo;
+        this.descricao = descricao;
+        this.precoUnitario = precoUnitario;
+    }
+
     /// =================
     /// GETTERS E SETTERS
     /// =================
